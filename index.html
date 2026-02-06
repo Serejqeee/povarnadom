@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда Домашних Поваров | Екатеринбург</title>
+    <meta name="description" content="Личный повар на час или доставка готовых рационов. Освободим от кухни. Ручная лепка, премиум продукты.">
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D3A076',
+                        secondary: '#8B7E74',
+                        dark: '#4A403A',
+                        accent: '#6BAF92'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Merriweather', serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Hide scrollbar for carousel */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-stone-50 text-dark antialiased">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="img/logo.png" alt="Logo" class="h-12 w-auto">
+                <div class="hidden sm:block leading-tight">
+                    <div class="font-bold text-lg text-dark tracking-wide uppercase">Команда Домашних Поваров</div>
+                    <div class="text-xs text-gray-500">Домашняя еда в Екатеринбурге</div>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex gap-8 font-medium text-sm text-gray-600">
+                <a href="#services" class="hover:text-primary transition">Услуги</a>
+                <a href="#team" class="hover:text-primary transition">Наши Повара</a>
+                <a href="#reviews" class="hover:text-primary transition">Отзывы</a>
+                <a href="#faq" class="hover:text-primary transition">Как это работает</a>
+            </nav>
+
+            <a href="https://t.me/+79122192826" target="_blank" class="bg-[#24A1DE] text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-[#1a8bb8] transition flex items-center gap-2 shadow-md">
+                <i class="fab fa-telegram-plane text-lg"></i> 
+                <span>Связаться</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-[600px] flex items-center justify-center text-center px-4 relative">
+        <div class="max-w-4xl text-white z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+                Вернем вкус настоящей<br>домашней еды
+            </h1>
+            <p class="text-lg md:text-xl mb-10 opacity-95 max-w-2xl mx-auto font-light leading-relaxed">
+                Забудьте о «второй смене» у плиты. Профессиональный повар приготовит меню на неделю на вашей кухне или привезет готовый рацион.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#c28e65] transition shadow-xl transform hover:-translate-y-1">
+                    🏠 Вызвать повара
+                </a>
+                <a href="#services" class="bg-white text-dark px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1">
+                    🚚 Заказать доставку
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-dark">Выберите удобный формат</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-stone-100 hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">👨‍🍳</div>
+                    <h3 class="text-2xl font-bold mb-4">Повар на дом</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Повар приедет, приготовит 4-5 блюд на несколько дней вперед и оставит после себя идеальный порядок.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> <span>Готовим на вашей кухне (2-3 часа)</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> <span>Можем купить продукты сами</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> <span>Учтем все аллергии и ваши пожелания</span></li>
+                    </ul>
+                    <div class="text-center p-4 bg-stone-50 rounded-xl mb-6">
+                        <span class="block text-xs text-gray-500 uppercase font-bold tracking-wider">Стоимость выезда</span>
+                        <div class="text-2xl font-bold text-dark">от 2 500 ₽</div>
+                    </div>
+                    <button onclick="sendTg('Хочу вызвать повара на дом. Расскажите подробнее.')" class="w-full border-2 border-primary text-primary font-bold py-3 rounded-xl hover:bg-primary hover:text-white transition">
+                        Выбрать меню
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-stone-100 hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">🥡</div>
+                    <h3 class="text-2xl font-bold mb-4">Доставка рационов</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Если не хотите пускать чужих или живете далеко. Повар приготовит на своей кухне и отправит курьером (или самовывоз).
+                    </p>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> <span>Фотоотчет продуктов и чеков</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> <span>Специальные кулинарные формы для горячих блюд</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> <span>Доставка еще горячих блюд курьером</span></li>
+                    </ul>
+                    <div class="text-center p-4 bg-stone-50 rounded-xl mb-6">
+                        <span class="block text-xs text-gray-500 uppercase font-bold tracking-wider">Стоимость готовки</span>
+                        <div class="text-2xl font-bold text-dark">от 2 500 ₽ <span class="text-sm font-normal text-gray-400">+ такси</span></div>
+                    </div>
+                    <button onclick="sendTg('Меня интересует доставка готового рациона.')" class="w-full border-2 border-primary text-primary font-bold py-3 rounded-xl hover:bg-primary hover:text-white transition">
+                        Узнать условия
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="py-20 bg-stone-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">Наши Звезды ⭐️</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">Хранительницы домашнего очага. Мы создаём тот самый уют, когда дома пахнет вкусной едой.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Anastasia -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/nastya.jpg" class="w-full h-full object-cover object-[center_20%] hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Анастасия</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">20 лет опыта</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Ботаника, Уктус, Центр</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Хочется просто прийти домой, выдохнуть и знать, что ужин готов? Я верну вам свободное время и приготовлю так, что муж попросит добавки.
+                        </p>
+                        <button onclick="sendTg('Хочу пригласить повара Анастасию.')" class="w-full py-2 border border-gray-200 rounded-lg text-sm font-bold hover:bg-gray-50 transition">Пригласить Анастасию</button>
+                    </div>
+                </div>
+
+                <!-- Natalia -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/natalia.jpg" class="w-full h-full object-cover object-[center_15%] hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Наталья</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded font-bold">30 лет стажа</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Автовокзал, Ботаника, Солнечный</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Всю жизнь кормлю людей с душой. Нежнейшие котлеты и пироги, как у бабушки. Со мной ваша семья будет сытой, а дом наполнится уютом.
+                        </p>
+                        <button onclick="sendTg('Хочу пригласить повара Наталью.')" class="w-full py-2 border border-gray-200 rounded-lg text-sm font-bold hover:bg-gray-50 transition">Пригласить Наталью</button>
+                    </div>
+                </div>
+
+                <!-- Veronika -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <!-- Подняли фокус вверх (35%), чтобы показать лицо крупнее -->
+                        <img src="img/veronika.jpg" class="w-full h-full object-cover object-[center_35%] hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Вероника</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-bold">Повар-шоколатье</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Юго-Запад, Центр, Парковый</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Знаете это чувство из детства, когда дома пахнет выпечкой? Я напеку вам гору пирожков и чебуреков, чтобы дома было тепло и вкусно.
+                        </p>
+                        <button onclick="sendTg('Хочу пригласить повара Веронику.')" class="w-full py-2 border border-gray-200 rounded-lg text-sm font-bold hover:bg-gray-50 transition">Пригласить Веронику</button>
+                    </div>
+                </div>
+
+                <!-- Galina -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/galina.jpg" class="w-full h-full object-cover object-[center_15%] hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Галина</h3>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded font-bold">Старая школа</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Веер Молл, Уралмаш, Пышма</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Вы зарабатываете деньги и растите детей, а я позабочусь, чтобы вас ждал горячий ужин. Повар старой закалки: чисто, быстро и надежно.
+                        </p>
+                        <button onclick="sendTg('Хочу пригласить повара Галину.')" class="w-full py-2 border border-gray-200 rounded-lg text-sm font-bold hover:bg-gray-50 transition">Пригласить Галину</button>
+                    </div>
+                </div>
+
+                <!-- Aksinya -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/aksinya.jpg" class="w-full h-full object-cover object-[center_15%] hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Аксинья</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-bold">Профи</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Академический</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Живете в Академе и устали от доставок? Я верну вам вкус нормальной еды. Моя школа — вагон-ресторан, поэтому готовлю шедевры быстро.
+                        </p>
+                        <button onclick="sendTg('Хочу пригласить повара Аксинью.')" class="w-full py-2 border border-gray-200 rounded-lg text-sm font-bold hover:bg-gray-50 transition">Пригласить Аксинью</button>
+                    </div>
+                </div>
+
+                <!-- Larisa -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <!-- Подняли фокус вверх (30%) -->
+                        <img src="img/larisa.jpg" class="w-full h-full object-cover object-[center_30%] hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Лариса</h3>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded font-bold">Шеф</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Центр, Железнодорожный</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Эффект "пришла мама и всё приготовила". Аккуратная и уважительная. Наготовлю вкусностей на несколько дней, чтобы вы отдохнули.
+                        </p>
+                        <button onclick="sendTg('Хочу пригласить повара Ларису.')" class="w-full py-2 border border-gray-200 rounded-lg text-sm font-bold hover:bg-gray-50 transition">Пригласить Ларису</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STEPS -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-dark">Всего 5 шагов к свободе</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                <div class="p-4">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h4 class="font-bold mb-2">Выбор</h4>
+                    <p class="text-sm text-gray-500">Вы выбираете блюда из меню (220+ рецептов)</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h4 class="font-bold mb-2">Список</h4>
+                    <p class="text-sm text-gray-500">Мы составляем точный список продуктов</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h4 class="font-bold mb-2">Заказ</h4>
+                    <p class="text-sm text-gray-500">Вы заказываете доставку (или мы за +400₽)</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                    <h4 class="font-bold mb-2">Магия</h4>
+                    <p class="text-sm text-gray-500">Повар готовит 2-3 часа на несколько дней вперед</p>
+                </div>
+                <div class="p-4 col-span-2 md:col-span-1">
+                    <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">5</div>
+                    <h4 class="font-bold mb-2">Чистота</h4>
+                    <p class="text-sm text-gray-500">Кухня блестит, холодильник полон</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS CAROUSEL -->
+    <section id="reviews" class="py-20 bg-stone-50 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-dark">Более 100 счастливых семей</h2>
+            
+            <div class="flex gap-6 overflow-x-auto no-scrollbar pb-8 snap-x snap-mandatory" style="scroll-padding-left: 1rem; scroll-padding-right: 1rem;">
+                
+                <!-- Review 1 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Мой кейс: отсутствие времени. Обратился к поварам — оказалось, цена такая же, как доставки, а еда домашняя и здоровая. Заказываю каждую неделю уже 2 месяца."</p>
+                    <div class="font-bold text-sm">— Пользователь</div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Зразы от Вероники бесподобные! Даже привередливая кошечка прибежала на запах. Доставили еще горячее, с пылу с жару."</p>
+                    <div class="font-bold text-sm">— Инна</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Работающей женщине это просто подарок. Муж ходит и нахваливает. Анастасия и Сергей — молодцы, все вкусно, быстро и полезно."</p>
+                    <div class="font-bold text-sm">— Алеся</div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Лариса очень приятная, к работе подходит с душой. Все очень вкусно, быстро, аккуратно. Будем сотрудничать!"</p>
+                    <div class="font-bold text-sm">— Ольга</div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Наталья пришла вовремя, за 2,5 часа приготовила полноценный обед. Пока она готовила, я занималась ребенком. Огромное облегчение!"</p>
+                    <div class="font-bold text-sm">— Снежана</div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Анастасия чудесный повар, приготовила ужин на три дня. Невероятно вкусно. Теперь не знаю, как рассказывать, что это была не я)))"</p>
+                    <div class="font-bold text-sm">— Алена</div>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Лариса пришла вовремя, приготовила 4 блюда. Оплата соответствует договоренности. Это выход из зоны комфорта, но всё прошло хорошо!"</p>
+                    <div class="font-bold text-sm">— Анна Владимировна</div>
+                </div>
+
+                <!-- Review 8 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Все профессионально, есть меню из 200 блюд. Сами блюда очень вкусные, качество оказалось самым лучшим."</p>
+                    <div class="font-bold text-sm">— Андрей</div>
+                </div>
+
+                <!-- Review 9 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Впервые попробовала услуги повара — это спасение! 5 блюд, 2 в заморозку. Теперь у меня есть готовый обед, когда нет времени."</p>
+                    <div class="font-bold text-sm">— Анастасия</div>
+                </div>
+
+                <!-- Review 10 -->
+                <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow snap-center flex-shrink-0">
+                    <div class="flex text-yellow-400 mb-2 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm mb-4 italic">"Давно искала, но стоило космических денег. Тут же цена приятная и очень вкусно. Теперь на постоянной основе пользуемся."</p>
+                    <div class="font-bold text-sm">— Юлия</div>
+                </div>
+
+            </div>
+            <div class="text-center text-gray-400 text-sm mt-4">← Листайте отзывы →</div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section id="calc" class="py-20 bg-dark text-white">
+        <div class="container mx-auto px-4 text-center max-w-2xl">
+            <h2 class="text-3xl font-bold mb-6">Рассчитать стоимость</h2>
+            <p class="mb-8 opacity-80">Заполните простую форму, и мы пришлем пример меню и точную цену в Telegram.</p>
+            <div class="bg-white text-dark p-6 rounded-2xl shadow-2xl text-left">
+                <div class="mb-4">
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Формат</label>
+                    <select id="c_type" class="w-full p-3 border rounded-lg bg-stone-50"><option>Выезд повара на дом</option><option>Доставка готового рациона</option></select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Семья</label>
+                    <div class="flex gap-2">
+                        <label class="flex-1 cursor-pointer"><input type="radio" name="fam" value="1-2 чел" class="hidden peer"><div class="p-3 border rounded-lg text-center peer-checked:bg-primary peer-checked:text-white transition">1-2</div></label>
+                        <label class="flex-1 cursor-pointer"><input type="radio" name="fam" value="3-4 чел" checked class="hidden peer"><div class="p-3 border rounded-lg text-center peer-checked:bg-primary peer-checked:text-white transition">3-4</div></label>
+                        <label class="flex-1 cursor-pointer"><input type="radio" name="fam" value="5+ чел" class="hidden peer"><div class="p-3 border rounded-lg text-center peer-checked:bg-primary peer-checked:text-white transition">5+</div></label>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Особенности</label>
+                    <div class="flex flex-wrap gap-2">
+                        <label class="flex items-center gap-2 text-sm bg-gray-100 px-3 py-2 rounded-lg cursor-pointer"><input type="checkbox" id="c_kids"> Детское</label>
+                        <label class="flex items-center gap-2 text-sm bg-gray-100 px-3 py-2 rounded-lg cursor-pointer"><input type="checkbox" id="c_pp"> ПП / Диета</label>
+                    </div>
+                </div>
+                <button onclick="submitCalc()" class="w-full bg-[#24A1DE] text-white font-bold py-4 rounded-xl hover:bg-[#1a8bb8] transition flex justify-center items-center gap-2">
+                    <i class="fab fa-telegram-plane"></i> Рассчитать в Telegram
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-sm border-t border-stone-800">
+        <div class="container mx-auto px-4">
+            <img src="img/logo.png" class="h-10 w-auto mx-auto mb-4 opacity-50 grayscale">
+            <p class="mb-2">ИП Карнаев Сергей Николаевич</p>
+            <p class="mb-4">ИНН 662605274799</p>
+            <a href="https://t.me/+79122192826" class="text-xl font-bold text-white hover:text-primary transition block mb-8">+7 (912) 219-28-26</a>
+            <div class="flex justify-center gap-4">
+                <a href="offer.html" class="hover:text-white transition">Договор оферты</a>
+                <a href="policy.html" class="hover:text-white transition">Конфиденциальность</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function sendTg(text) {
+            window.open('https://t.me/+79122192826', '_blank'); 
+        }
+
+        function submitCalc() {
+            window.open('https://t.me/+79122192826', '_blank');
+        }
+    </script>
+</body>
+</html>
